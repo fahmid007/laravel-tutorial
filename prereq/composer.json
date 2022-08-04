@@ -1,0 +1,16 @@
+{
+    "name": "first_example/package",
+    "description": "example",
+    "autoload": {
+        "psr-4": {
+            "FirstExample\\Package\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fahmid Imtiaz",
+            "email": "fahmidimtiaz13@gmail.com"
+        }
+    ],
+    "require": {}
+}
