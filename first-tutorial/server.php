@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * ---------------- Root Path ---------------
  * Laravel - A PHP Framework For Web Artisans
  *
  * @package  Laravel
