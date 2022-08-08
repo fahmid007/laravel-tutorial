@@ -17,9 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function(){
-    return view('layouts/about');
-});
+// Route::get('/about', function(){
+//     // return view('layouts/about');
+//     return redirect('contact');
+// });
+Route::view('/about', 'layouts.about');
 
 Route::get('contact', function(){
     return view('layouts/contact');
