@@ -17,16 +17,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/about', function(){
-//     // return view('layouts/about');
-//     return redirect('contact');
-// });
-Route::view('/about', 'layouts.about');
+Route::get('/about', function(){
+    return view('layouts/about');
+    // return redirect('about');
+})->name('about.us');
 
-Route::get('contact', function(){
+Route::get('/contact', function(){
     return view('layouts/contact');
-});
+})->name('contact.us');
 
+Route::get('/country', function(){
+    return view('layouts/country');
+})->middleware('country');
+
+//=======================Parameter======================//
+// Route::get('/contact/{roll}', function($roll){
+//     return "My roll is ".$roll;
+// });
+//=======================Parameter======================//
 
 Route::get('/dashboard', function () {
     return view('dashboard');

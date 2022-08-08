@@ -35,7 +35,7 @@
             <h1> This is homepage</h1>
             <div>
                 <ul>
-                    <li class="list_item"><a href=" {{ url('about') }} "> About </a></li>
+                    <li class="list_item"><a href=" {{ route('about.us') }} "> About </a></li>
                     <li class="list_item"><a href=" {{ url('contact') }} "> Contact </a></li>
                 </ul>
             </div>
