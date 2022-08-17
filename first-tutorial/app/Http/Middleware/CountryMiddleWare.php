@@ -18,7 +18,7 @@ class CountryMiddleWare
     {
         $array = ['Bangladesh', 'America', 'Canada', 'Africa'];
         if (in_array($request->country, $array)) {
-            return $next($request);
+           return $next($request);
         }
         return redirect()->to('/');
     }

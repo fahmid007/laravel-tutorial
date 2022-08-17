@@ -36,7 +36,8 @@
             <div>
                 <ul>
                     <li class="list_item"><a href=" {{ route('about.us') }} "> About </a></li>
-                    <li class="list_item"><a href=" {{ url('contact') }} "> Contact </a></li>
+                    <li class="list_item"><a href=" {{ route('contact.us') }} "> Contact </a></li>
+                    <li class="list_item"><a href=" {{ route('country.us') }} "> Country </a></li>
                 </ul>
             </div>
         </div>
