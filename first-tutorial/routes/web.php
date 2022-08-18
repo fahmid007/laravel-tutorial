@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\FirstInvokeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +36,11 @@ Route::get('/', function () {
 //==========laravel-8,9====================//
 Route::get('/about', [FirstController::class, 'about_index'])->name('about.us');
 Route::get('/contact', [FirstController::class, 'index'])->name('contact.us');
-Route::get('/country', [FirstController::class, 'country_index'])->name('country.us');
+// Route::get('/country', [FirstController::class, 'country_index'])->name('country.us');
+Route::get('/test', FirstInvokeController::class);
+Route::get('/hello', FirstInvokeController::class, 'hello'); //everything is okay but can't view. coz invoke is first priority
+Route::get('/country', [FirstController::class, 'country_index'])->middleware('country');
+
 
 
 Route::get('/dashboard', function () {
