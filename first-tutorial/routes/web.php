@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\FirstInvokeController;
+use App\Http\Controllers\CustomController\secondController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,7 @@ Route::get('/', function () {
 Route::get('/about', [FirstController::class, 'about_index'])->name('about.us');
 Route::get('/contact', [FirstController::class, 'index'])->name('contact.us');
 Route::post('/student/store', [FirstController::class, 'student_store'])->name('student.store');
+Route::get('test_form', [secondController::class, 'test_form']);
 
 
 

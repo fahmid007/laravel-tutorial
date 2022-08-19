@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\CustomController\secondController;
 use Illuminate\Http\Request;
+
 
 class FirstController extends Controller
 {
@@ -27,7 +29,17 @@ class FirstController extends Controller
     //___student_store__//
     public function student_store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
+
+        $data = array();
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['number'] = $request->number;
+
+        // return redirect('/');
+        // return redirect()->route('about.us');
+        // return redirect()->action([secondController::class, 'testform']);
+        return redirect()->action([secondController::class, 'test_form']);
     }
 
 }

@@ -6,5 +6,6 @@
     @csrf
     Name: <input type="text" name="name" placeholder="Enter Your name"><br><br>
     Email: <input type="email" name="email" placeholder="Enter Your email address"><br><br>
+    Email: <input type="text" name="nmber" placeholder="Enter Your phone number"><br><br>
     <button type="submit"> Submit </button>
 </form>
