@@ -42,4 +42,9 @@ class FirstController extends Controller
         return redirect()->action([secondController::class, 'test_form']);
     }
 
+    //======== laravel ===========//
+    public function laravel()
+    {
+        return view('layouts/laravel');
+    }
 }
