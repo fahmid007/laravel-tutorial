@@ -37,10 +37,10 @@ Route::get('/', function () {
 //==========laravel-8,9====================//
 Route::get('/about', [FirstController::class, 'about_index'])->name('about.us');
 Route::get('/contact', [FirstController::class, 'index'])->name('contact.us');
-Route::post('/student/store', [FirstController::class, 'student_store'])->name('student.store');
+// Route::post('/student/store', [FirstController::class, 'student_store'])->name('student.store');
 Route::get('test_form', [secondController::class, 'test_form']);
 
-Route::get('/laravel', [FirstController::class, 'laravel'])->name('laravel.us');
+Route::post('/store/contact', [FirstController::class, 'store'])->name('store.contact');
 
 
 // Route::get('/country', [FirstController::class, 'country_index'])->name('country.us');

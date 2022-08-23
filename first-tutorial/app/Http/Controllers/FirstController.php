@@ -42,9 +42,14 @@ class FirstController extends Controller
         return redirect()->action([secondController::class, 'test_form']);
     }
 
-    //======== laravel ===========//
-    public function laravel()
+
+    public function store(Request $request)
     {
-        return view('layouts/laravel');
+        $validatedData = $request->validate([
+            'name' => ['required', 'max:80'],
+            'email' => ['required', 'max:80'],
+            'pass' => ['required', 'min:6', 'max:20'],
+        ]);
+        dd($request->all());
     }
 }
